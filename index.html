@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Contact System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN SECTION -->
+    <section id="loginSection" class="container">
+
+        <h2>College Contact System</h2>
+
+        <p>CR / Teacher Login</p>
+
+        <form id="loginForm">
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <section id="loginMessage" aria-live="polite"></section>
+
+    </section>
+
+
+    <!-- MAIN APPLICATION -->
+    <div id="appSection" style="display: none;">
+
+        <header>
+            <h1>College Contact System</h1>
+            <p>Student Directory for CRs and Teachers</p>
+
+            <button id="logoutButton">Logout</button>
+        </header>
+
+
+        <main class="container">
+
+            <h2>Find a Student</h2>
+
+            <p>Enter the student's roll number.</p>
+
+            <form id="searchForm">
+
+                <label for="rollNumber">
+                    Student Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="rollNumber"
+                    placeholder="Example: 26IT001"
+                    required
+                >
+
+                <button type="submit">
+                    Search Student
+                </button>
+
+            </form>
+
+
+            <section id="studentResult" aria-live="polite">
+                <p>Student details will appear here.</p>
+            </section>
+
+        </main>
+
+
+        <footer>
+            <p>College Contact System &copy; 2026</p>
+        </footer>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- YOUR SUPABASE CONNECTION -->
+    <script src="supabase.js"></script>
+
+    <!-- YOUR APPLICATION JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
